@@ -39,14 +39,14 @@ class ModelServiceImpl(
                 return compareAnswers.lostQuestions
             }
             DRIVER_LOADER -> {
-                val modelAnswers = callModel("model1", udpipeFile) // FIXME modelName
+                val modelAnswers = callModel("model2", udpipeFile) // FIXME modelName
                 val questions = getQuestions(DRIVER_LOADER)
                 val compareAnswers = compareAnswers(questions, modelAnswers)
                 saveAnswers(compareAnswers.answers)
                 return compareAnswers.lostQuestions
             }
             WAITER -> {
-                val modelAnswers = callModel("model1", udpipeFile) // FIXME modelName
+                val modelAnswers = callModel("model3", udpipeFile) // FIXME modelName
                 val questions = getQuestions(WAITER)
                 val compareAnswers = compareAnswers(questions, modelAnswers)
                 saveAnswers(compareAnswers.answers)
