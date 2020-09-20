@@ -94,11 +94,12 @@ class ModelServiceImpl(
 
     private fun callModel(modelName: String, udpipePath: String): Map<String, String> {
         val modelsPath = "/home/hack/hack/$modelName.py"
-        val jsonResponse = commandExecutorService.exec(
-            listOf("python3", modelsPath, udpipePath)
-        )!!
-
-        return objectMapper.readValue<HashMap<String, String>>(jsonResponse)
+        return emptyMap()
+//        val jsonResponse = commandExecutorService.exec(
+//            listOf("python3", modelsPath, udpipePath)
+//        )!!
+//
+//        return objectMapper.readValue<HashMap<String, String>>(jsonResponse)
     }
 
     companion object {
